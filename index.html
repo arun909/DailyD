@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JRF Master – Tourism Study Hub</title>
+  <meta name="description"
+    content="UGC NET JRF Tourism Administration study app with interactive questions, answer reveals, and personal notes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <span class="logo-icon">📚</span>
+        <h1>JRF <span class="accent">Master</span></h1>
+      </div>
+      <p class="subtitle">Tourism Admin &amp; Mgmt</p>
+    </div>
+
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+      <button class="theme-btn active" id="themeDark">🌙 Dark</button>
+      <button class="theme-btn" id="themeNight">🦉 Night</button>
+    </div>
+
+    <nav class="sidebar-nav">
+      <h3 class="nav-label">Question Papers</h3>
+      <ul class="paper-list" id="paperList">
+        <li class="paper-item active" data-paper="december_2025">
+          <span class="paper-dot"></span>
+          December 2025
+        </li>
+      </ul>
+    </nav>
+
+    <div class="sidebar-filters">
+      <h3 class="nav-label">Filter by Type</h3>
+      <select id="typeFilter" class="filter-select">
+        <option value="all">All Questions</option>
+        <option value="simple">Simple MCQ</option>
+        <option value="match">Match the Following</option>
+        <option value="arrange">Arrange in Order</option>
+        <option value="assertion">Assertion &amp; Reason</option>
+        <option value="statements">Statements</option>
+        <option value="comprehension">Comprehension</option>
+      </select>
+    </div>
+
+    <div class="sidebar-stats" id="sidebarStats">
+      <div class="stat-card">
+        <span class="stat-num" id="totalQ">0</span>
+        <span class="stat-label">Questions</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num" id="notesCount">0</span>
+        <span class="stat-label">Notes Taken</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num" id="revealedCount">0</span>
+        <span class="stat-label">Answers Seen</span>
+      </div>
+    </div>
+
+    <button class="btn-reset" id="btnResetNotes" title="Clear all saved notes">🗑️ Reset All Notes</button>
+  </aside>
+
+  <!-- Mobile top bar -->
+  <header class="mobile-header" id="mobileHeader">
+    <button class="hamburger" id="hamburger">☰</button>
+    <h1 class="mobile-title">JRF <span class="accent">Master</span></h1>
+    <div class="mobile-progress" id="mobileProgress">0/100</div>
+  </header>
+
+  <!-- Main content -->
+  <main class="main-content" id="mainContent">
+    <div class="content-header">
+      <h2 id="paperTitle">December 2025</h2>
+      <p id="paperSubtitle">UGC NET JRF – Tourism Administration and Management</p>
+      <div class="progress-bar-wrap">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+    </div>
+
+    <div class="questions-container" id="questionsContainer">
+      <!-- Questions rendered by JS -->
+    </div>
+
+    <div class="back-to-top" id="backToTop" title="Back to top">↑</div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
