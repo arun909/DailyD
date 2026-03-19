@@ -6,7 +6,7 @@
   'use strict';
 
   // ─── State ───
-  let currentPaper = 'december_2025';
+  let currentPaper = 'yourfile';
   let paperData = null;
   let revealedSet = new Set();
   let debounceTimers = {};
@@ -63,7 +63,7 @@
   // ─── Load Paper JSON ───
   async function loadPaper(name) {
     try {
-      const res = await fetch(`data/${name}.json`);
+      const res = await fetch("/data/yourfile.json");
       if (!res.ok) throw new Error('Failed to load');
       paperData = await res.json();
       revealedSet = new Set();
